@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { SquarePlay } from "lucide-react";
-import { DnDContext, DnDProvider } from "@/context/DnDContext";
+import { DnDProvider } from "@/context/DnDContext";
 import { Draggable } from "react-beautiful-dnd";
 import { Skeleton } from "./ui/skeleton";
 
@@ -33,11 +33,7 @@ const VideoPlaylist = (): JSX.Element => {
   );
 };
 
-const PlaylistItems = React.memo(function PlaylistItems() {
-  return <PlaylistItem />;
-});
-
-const PlaylistItem = (): JSX.Element => {
+const PlaylistItems = (): JSX.Element => {
   const { videoList, setCurrentVideo, currentVideo } = useContext(VideoContext);
 
   return (
@@ -61,7 +57,7 @@ const PlaylistItem = (): JSX.Element => {
               >
                 <div className="w-1/3 relative">
                   <video className="h-full w-full rounded-2xl">
-                    <source src={`${video.sources[0]}#t=5`} type="video/mp4" />
+                    <source src={`${video.sources[0]}#t=7`} type="video/mp4" />
                   </video>
                   <p className="absolute w-full h-full flex justify-center items-center top-0 z-[10] text-primary text-[25px] cursor-pointer rounded-2xl bg-slate-500 bg-opacity-30">
                     <SquarePlay />

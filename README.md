@@ -5,6 +5,7 @@ This is a simple video player developed using Next.js, Tailwind CSS, and Shadcn.
 
 ## Features
 
+- Draggable Playlist
 - Play/Pause
 - Volume Control
 - Fullscreen
@@ -18,6 +19,8 @@ This is a simple video player developed using Next.js, Tailwind CSS, and Shadcn.
 - Video Duration
 - Video Progress
 - Video Resume from Last Played Position
+- Skeleton Loading
+- Responsive Design
 
 ## Deployed URL
 

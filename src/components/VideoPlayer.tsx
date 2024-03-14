@@ -9,10 +9,11 @@ const VideoPlayer = (): JSX.Element => {
   }: {
     currentVideo: IVideoList;
   } = useContext(VideoContext);
-  document.title = `${currentVideo.title} | Video Player` || "Video Player";
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    document.title = `${currentVideo.title} | Video Player` || "Video Player";
+
     const videoDuration = localStorage.getItem("videoDuration");
     const videoDurationArray = videoDuration ? JSON.parse(videoDuration) : [];
     if (videoRef.current) {

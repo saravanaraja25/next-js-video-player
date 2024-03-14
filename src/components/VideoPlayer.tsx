@@ -81,15 +81,17 @@ const VideoPlayer = (): JSX.Element => {
     <>
       {currentVideo.sources ? (
         <>
-          <video
-            ref={videoRef}
-            key={currentVideo.sources[0]}
-            controls
-            width="100%"
-            className="rounded-md lg:h-[calc(50vh+110px)] border border-secondary-muted shadow"
-          >
-            <source src={currentVideo.sources[0]} type="video/mp4" />
-          </video>
+          <div className="video-container relative">
+            <video
+              ref={videoRef}
+              key={currentVideo.sources[0]}
+              controls
+              width="100%"
+              className="rounded-md lg:h-[calc(50vh+110px)] border border-secondary-muted shadow"
+            >
+              <source src={currentVideo.sources[0]} type="video/mp4" />
+            </video>
+          </div>
           <div className="mt-5 space-y-3">
             <h1 className="text-2xl font-bold">{currentVideo.title}</h1>
             <p className="text-secondary-muted">{currentVideo.subtitle}</p>

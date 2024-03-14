@@ -21,10 +21,6 @@ export const VideoProvider = ({ children }: { children: React.ReactNode }) => {
     fetchVideoList();
   }, []);
 
-  useEffect(() => {
-    console.log("currentVideo", currentVideo);
-  }, [currentVideo]);
-
   return (
     <VideoContext.Provider
       value={{

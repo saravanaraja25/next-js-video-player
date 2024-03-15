@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { Github } from "lucide-react";
+import { Button } from "./ui/button";
 
 export const Navbar = () => {
   return (
@@ -18,7 +20,20 @@ export const Navbar = () => {
             </h1>
           </Link>
         </div>
-        <ThemeSwitcher />
+        <div className="flex items-center gap-4">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() =>
+              window.open(
+                "https://github.com/saravanaraja25/next-js-video-player"
+              )
+            }
+          >
+            <Github className="h-5 w-5" />
+          </Button>
+          <ThemeSwitcher />
+        </div>
       </header>
     </div>
   );
